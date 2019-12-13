@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled, { css } from "styled-components";
+import { colors } from "./styles/global";
+import { Button, Container } from "./styles/elements";
+import {Theme} from './styles/themes'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Theme dark>
+        <Container>
+          <div className="nested">
+            <h1>Styled Components </h1>
+            <h2>CSS that actually makes sense</h2>
+            <h3>Another masterlclass by pablo</h3>
+            <Button primary>Click me</Button>
+            <Button secondary>Click me</Button>
+            <Button dark>Click me</Button>
+            <Button>Click me</Button>
+          </div>
+        </Container>
+      </Theme>
     </div>
   );
 }
